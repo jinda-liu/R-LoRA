@@ -10,16 +10,16 @@ Fine-tuning large language models (LLMs) is prohibitively expensive in terms of 
 
 In the Multi-Head architecture, the parameter similarity among head matrices remains high, hindering task-specific knowledge learning and slowing convergence speed. This is due to zero initialization of head matrices B, leading to similar update directions. To address this, we use multi-head randomization in R-LoRA, combining random initialization and multi-head dropout to diversify starting points and inputs, thereby improving task-specific learning.
 
-<img src="figure\framework.png" alt="framework" style="zoom:50%;" />
+<img src="figure\framework.png" alt="framework" style="zoom:25%;" />
 
-<img src="D:\A_code&research\picture\cs_hyd.png" alt="cs_hyd" style="zoom:50%;" />
+<img src="figure\cs_hyd.png" alt="cs_hyd" style="zoom:25%;" />
 
 To address this, we use multi-head randomization in R-LoRA, combining random initialization and multi-head dropout to diversify starting points and inputs, thereby improving task-specific learning. This approach enables LLMs to better learn task-specific knowledge by breaking the symmetry of initial parameters and diversifying optimization trajectories.
 
 ### Install
 
 ```sh
-https://github.com/jinda-liu/R-LoRA.git
+git clone https://github.com/jinda-liu/R-LoRA.git
 cd R-LoRA
 conda create -n rlora python=3.10
 conda activate rlora
